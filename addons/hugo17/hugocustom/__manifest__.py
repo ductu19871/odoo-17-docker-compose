@@ -12,8 +12,8 @@
     "data": [
         "security/ir.model.access.csv",
         # "security/ir_rule.xml",
-        "data/stock_data.xml",
-        "data/account_data.xml",
+        # "data/stock_data.xml",
+        # "data/account_data.xml",
         "data/sale_delivery_method_data.xml",
         "data/account_payment_method.xml",
         "view/res_users_view.xml",
