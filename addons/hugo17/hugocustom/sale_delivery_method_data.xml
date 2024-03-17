@@ -1,0 +1,12 @@
+<odoo>
+    <data noupdate="0">
+        <record  model="sale.delivery.method" id="sale_delivery_method_1">
+            <field name="name">Nhận tại quầy</field>
+            <field name="active">True</field>
+        </record>
+        <record  model="sale.delivery.method" id="sale_delivery_method_2">
+            <field name="name">COD</field>
+            <field name="active">True</field>
+        </record>
+    </data>
+</odoo>

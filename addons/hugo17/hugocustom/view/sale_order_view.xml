@@ -1,0 +1,19 @@
+<odoo>
+    <record id="view_order_form_with_hugo" model="ir.ui.view">
+            <field name="name">hugo.sale.order.form</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+                <field name="source_id" position="replace"/>
+                <field name="payment_term_id" position="after">
+                    <field name="add_state" />
+                    <field name="source_id" />
+                    <field name="quotation_term" />
+                    <field name="payment_method_id" />
+                    <field name="advance_money" />
+                    <field name="delivery_method_id" />
+                    <field name="note2" />
+                </field>
+            </field>
+    </record>
+</odoo>

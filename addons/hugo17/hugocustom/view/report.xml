@@ -1,0 +1,30 @@
+<odoo>
+    <record id="action_purchase_report_report_aeroo" model="ir.actions.report">
+        <field name="name">Purchase Report</field>
+        <field name="type">ir.actions.report</field>
+        <field name="model">sale.order</field>
+        <field name="report_name">ndt_sale_report</field>
+        <field name="report_type">aeroo</field>
+        <field name="aeroo_in_format">odt</field>
+        <field name="aeroo_out_format_id" ref="report_aeroo_tltek.aeroo_mimetype_pdf_odt"/>
+        <field name="aeroo_template_path">hugocustom/report/test.odt</field>
+        <field name="aeroo_template_source">file</field>
+   		<field name="print_report_name">'test'</field>
+   		<field name="binding_model_id" ref="sale.model_sale_order"/>
+    </record>
+
+    <record id="action_sale_report_aeroo" model="ir.actions.report">
+        <field name="name">Sale Report</field>
+        <field name="type">ir.actions.report</field>
+        <field name="model">sale.order</field>
+        <field name="report_name">ndt_sale_or_quotation_report</field>
+        <field name="report_type">aeroo</field>
+        <field name="aeroo_in_format">odt</field>
+        <field name="aeroo_out_format_id" ref="report_aeroo_tltek.aeroo_mimetype_pdf_odt"/>
+        <field name="aeroo_template_path">hugocustom/report/sale_report_py3o.odt</field>
+        <field name="aeroo_template_source">file</field>
+   		<field name="print_report_name">'sale_or_quotation'</field>
+   		<field name="binding_model_id" ref="sale.model_sale_order"/>
+    </record>
+
+</odoo>

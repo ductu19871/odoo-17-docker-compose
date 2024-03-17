@@ -1,0 +1,511 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* report_aeroo_tltek
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-10-26 18:22+0000\n"
+"PO-Revision-Date: 2022-10-26 18:22+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: report_aeroo_tltek
+#: model:ir.model.fields,field_description:report_aeroo_tltek.field_ir_actions_report__active
+msgid "Active"
+msgstr "Hiệu lực"
+
+#. module: report_aeroo_tltek
+#: model_terms:ir.ui.view,arch_db:report_aeroo_tltek.act_report_xml_view1
+msgid "Add in the 'Print' menu"
+msgstr "Thêm vào nút 'In'"
+
+#. module: report_aeroo_tltek
+#: model:ir.model,name:report_aeroo_tltek.model_aeroo_filename_line
+msgid "Aeroo Filename Line"
+msgstr "Các dòng chứa file Aeroo"
+
+#. module: report_aeroo_tltek
+#: model:res.groups,name:report_aeroo_tltek.group_aeroo_manager
+msgid "Aeroo Manager"
+msgstr "Quản lý Aeroo"
+
+#. module: report_aeroo_tltek
+#: model_terms:ir.ui.view,arch_db:report_aeroo_tltek.act_report_xml_view1
+msgid "Aeroo Report"
+msgstr "Báo cáo Aeroo"
+
+#. module: report_aeroo_tltek
+#: model:ir.model.fields,field_description:report_aeroo_tltek.field_mail_template__aeroo_report_ids
+#: model:ir.model.fields.selection,name:report_aeroo_tltek.selection__ir_actions_report__report_type__aeroo
+#: model:ir.ui.menu,name:report_aeroo_tltek.menu_ir_action_aeroo_report_admin
+#: model:ir.ui.menu,name:report_aeroo_tltek.menu_ir_action_aeroo_report_manager
+msgid "Aeroo Reports"
+msgstr "Báo cáo Aeroo"
+
+#. module: report_aeroo_tltek
+#: code:addons/report_aeroo_tltek/models/ir_actions_report.py:0
+#, python-format
+msgid ""
+"Aeroo Reports do not support generating non-pdf reports in batch. You must "
+"select one record at a time."
+msgstr ""
+
+#. module: report_aeroo_tltek
+#: model:ir.model.fields,field_description:report_aeroo_tltek.field_ir_actions_report__aeroo_template_data
+msgid "Aeroo Template Data"
+msgstr "Dữ liệu mẫu Aeroo"
+
+#. module: report_aeroo_tltek
+#: model:ir.model,name:report_aeroo_tltek.model_aeroo_template_line
+msgid "Aeroo Template Line"
+msgstr "Dòng mẫu Aeroo"
+
+#. module: report_aeroo_tltek
+#: model:ir.model.fields,field_description:report_aeroo_tltek.field_ir_actions_report__aeroo_template_path
+msgid "Aeroo Template Path"
+msgstr "Đường dẫn mẫu Aeroo"
+
+#. module: report_aeroo_tltek
+#: code:addons/report_aeroo_tltek/models/ir_actions_report.py:0
+#, python-format
+msgid "At least one record must be selected to generate the report {report}."
+msgstr "Ít nhất một bản ghi phải được chọn để tạo báo cáo {report}."
+
+#. module: report_aeroo_tltek
+#: model_terms:ir.ui.view,arch_db:report_aeroo_tltek.act_report_xml_view1
+msgid "Attachments"
+msgstr "Tệp đính kèm"
+
+#. module: report_aeroo_tltek
+#: model:ir.model.fields,field_description:report_aeroo_tltek.field_aeroo_mimetype__code
+msgid "Code"
+msgstr "Mã"
+
+#. module: report_aeroo_tltek
+#: model:ir.model.fields,field_description:report_aeroo_tltek.field_aeroo_filename_line__company_id
+#: model:ir.model.fields,field_description:report_aeroo_tltek.field_aeroo_template_line__company_id
+msgid "Company"
+msgstr "Công ty"
+
+#. module: report_aeroo_tltek
+#: model:ir.model.fields,field_description:report_aeroo_tltek.field_ir_actions_report__aeroo_company_eval
+msgid "Company Evaluation"
+msgstr "Công ty"
+
+#. module: report_aeroo_tltek
+#: model:ir.model.fields,field_description:report_aeroo_tltek.field_aeroo_mimetype__compatible_types
+msgid "Compatible Mime-Types"
+msgstr "Các kiểu Mime tương thích"
+
+#. module: report_aeroo_tltek
+#: code:addons/report_aeroo_tltek/models/ir_actions_report.py:0
+#, python-format
+msgid ""
+"Could not generate the report %(report)s using the format %(output_format)s."
+" %(error)s"
+msgstr ""
+"Không thể tạo báo cáo %(report)s bằng định dạng %(output_format)s."
+" %(error)s"
+
+#. module: report_aeroo_tltek
+#: code:addons/report_aeroo_tltek/models/ir_actions_report.py:0
+#, python-format
+msgid ""
+"Could not merge the pdf outputs of the report %(report)s.\n"
+"\n"
+"%(error)s"
+msgstr ""
+"Không thể hợp nhất các đầu ra pdf của báo cáo %(report)s.\n"
+"\n"
+"%(error)s"
+
+#. module: report_aeroo_tltek
+#: code:addons/report_aeroo_tltek/models/ir_actions_report.py:0
+#, python-format
+msgid ""
+"Could not render report {report} for the company {company} in the language "
+"{lang}."
+msgstr ""
+"Không thể hiển thị báo cáo {report} cho công ty {company} bằng ngôn ngữ"
+"{lang}."
+
+#. module: report_aeroo_tltek
+#: code:addons/report_aeroo_tltek/models/ir_actions_report.py:0
+#, python-format
+msgid ""
+"Could not render the attachment filename for the report {report} in the "
+"language {lang}."
+msgstr ""
+"Không thể hiển thị tên tệp đính kèm cho báo cáo {report} bằng "
+"ngôn ngữ {lang}."
+
+#. module: report_aeroo_tltek
+#: model:ir.model.fields,field_description:report_aeroo_tltek.field_ir_actions_report__aeroo_country_eval
+msgid "Country Evaluation"
+msgstr "Quốc gia"
+
+#. module: report_aeroo_tltek
+#: model:ir.model.fields,field_description:report_aeroo_tltek.field_aeroo_filename_line__create_uid
+#: model:ir.model.fields,field_description:report_aeroo_tltek.field_aeroo_mimetype__create_uid
+#: model:ir.model.fields,field_description:report_aeroo_tltek.field_aeroo_template_line__create_uid
+msgid "Created by"
+msgstr "Tạo bởi"
+
+#. module: report_aeroo_tltek
+#: model:ir.model.fields,field_description:report_aeroo_tltek.field_aeroo_filename_line__create_date
+#: model:ir.model.fields,field_description:report_aeroo_tltek.field_aeroo_mimetype__create_date
+#: model:ir.model.fields,field_description:report_aeroo_tltek.field_aeroo_template_line__create_date
+msgid "Created on"
+msgstr "Tạo vào"
+
+#. module: report_aeroo_tltek
+#: model:ir.model.fields,field_description:report_aeroo_tltek.field_ir_actions_report__aeroo_currency_eval
+msgid "Currency Evaluation"
+msgstr "Tiền tệ"
+
+#. module: report_aeroo_tltek
+#: model:ir.model.fields.selection,name:report_aeroo_tltek.selection__ir_actions_report__aeroo_template_source__database
+msgid "Database"
+msgstr "Cơ sở dữ liệu"
+
+#. module: report_aeroo_tltek
+#: model:ir.model.fields,field_description:report_aeroo_tltek.field_ir_actions_report__aeroo_filename_per_lang
+msgid "Different Filename per Language"
+msgstr "File khác nhau cho mỗi ngôn ngữ"
+
+#. module: report_aeroo_tltek
+#: model:ir.model.fields.selection,name:report_aeroo_tltek.selection__ir_actions_report__aeroo_template_source__lines
+msgid "Different Template per Language / Company"
+msgstr "Mẫu khác nhau cho mỗi ngôn ngữ/ công ty"
+
+#. module: report_aeroo_tltek
+#: model:ir.model.fields,field_description:report_aeroo_tltek.field_aeroo_filename_line__display_name
+#: model:ir.model.fields,field_description:report_aeroo_tltek.field_aeroo_mimetype__display_name
+#: model:ir.model.fields,field_description:report_aeroo_tltek.field_aeroo_template_line__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: report_aeroo_tltek
+#: model_terms:ir.ui.view,arch_db:report_aeroo_tltek.act_report_xml_view1
+msgid "Display an option on related documents to print this report"
+msgstr "Display an option on related documents to print this report"
+
+#. module: report_aeroo_tltek
+#: model:ir.model,name:report_aeroo_tltek.model_mail_template
+msgid "Email Templates"
+msgstr "Mẫu email"
+
+#. module: report_aeroo_tltek
+#: model:ir.model.fields.selection,name:report_aeroo_tltek.selection__ir_actions_report__aeroo_template_source__file
+msgid "File"
+msgstr "File"
+
+#. module: report_aeroo_tltek
+#: model:ir.model.fields,field_description:report_aeroo_tltek.field_aeroo_template_line__template_filename
+msgid "File Name"
+msgstr "Tên File"
+
+#. module: report_aeroo_tltek
+#: model:ir.model.fields,field_description:report_aeroo_tltek.field_aeroo_filename_line__filename
+msgid "Filename"
+msgstr "Tên File"
+
+#. module: report_aeroo_tltek
+#: model:ir.model.fields,field_description:report_aeroo_tltek.field_ir_actions_report__aeroo_filename_line_ids
+msgid "Filenames by Language"
+msgstr "Các file theo ngôn ngữ"
+
+#. module: report_aeroo_tltek
+#: model:ir.model.fields,field_description:report_aeroo_tltek.field_aeroo_mimetype__filter_name
+msgid "Filter Name"
+msgstr "Tên bộ lọc"
+
+#. module: report_aeroo_tltek
+#: model_terms:ir.ui.view,arch_db:report_aeroo_tltek.act_report_xml_view1
+msgid "Generate Report From Record List"
+msgstr "Tạo báo cáo từ giao diện danh sách"
+
+#. module: report_aeroo_tltek
+#: model_terms:ir.ui.view,arch_db:report_aeroo_tltek.act_report_xml_view1
+msgid "Generic"
+msgstr "Chung"
+
+#. module: report_aeroo_tltek
+#: model_terms:ir.ui.view,arch_db:report_aeroo_tltek.act_aeroo_report_xml_search_view
+msgid "Group By"
+msgstr "Nhóm theo"
+
+#. module: report_aeroo_tltek
+#: model_terms:ir.ui.view,arch_db:report_aeroo_tltek.act_report_xml_view1
+msgid "Groups"
+msgstr "Nhóm"
+
+#. module: report_aeroo_tltek
+#: model:ir.model.fields,field_description:report_aeroo_tltek.field_aeroo_filename_line__id
+#: model:ir.model.fields,field_description:report_aeroo_tltek.field_aeroo_mimetype__id
+#: model:ir.model.fields,field_description:report_aeroo_tltek.field_aeroo_template_line__id
+msgid "ID"
+msgstr "ID"
+
+#. module: report_aeroo_tltek
+#: model_terms:ir.ui.view,arch_db:report_aeroo_tltek.act_aeroo_report_xml_search_view
+msgid "Inactive"
+msgstr "Không hoạt động"
+
+#. module: report_aeroo_tltek
+#: model:ir.model.fields,field_description:report_aeroo_tltek.field_aeroo_filename_line__lang_id
+#: model:ir.model.fields,field_description:report_aeroo_tltek.field_aeroo_template_line__lang_id
+msgid "Language"
+msgstr "Ngôn ngữ"
+
+#. module: report_aeroo_tltek
+#: model:ir.model.fields,field_description:report_aeroo_tltek.field_ir_actions_report__aeroo_lang_eval
+msgid "Language Evaluation"
+msgstr "Ngôn ngữ"
+
+#. module: report_aeroo_tltek
+#: model:ir.model.fields,field_description:report_aeroo_tltek.field_aeroo_filename_line____last_update
+#: model:ir.model.fields,field_description:report_aeroo_tltek.field_aeroo_mimetype____last_update
+#: model:ir.model.fields,field_description:report_aeroo_tltek.field_aeroo_template_line____last_update
+msgid "Last Modified on"
+msgstr "Sửa đổi lần cuối vào"
+
+#. module: report_aeroo_tltek
+#: model:ir.model.fields,field_description:report_aeroo_tltek.field_aeroo_filename_line__write_uid
+#: model:ir.model.fields,field_description:report_aeroo_tltek.field_aeroo_mimetype__write_uid
+#: model:ir.model.fields,field_description:report_aeroo_tltek.field_aeroo_template_line__write_uid
+msgid "Last Updated by"
+msgstr "Sửa đổi lần cuối bởi"
+
+#. module: report_aeroo_tltek
+#: model:ir.model.fields,field_description:report_aeroo_tltek.field_aeroo_filename_line__write_date
+#: model:ir.model.fields,field_description:report_aeroo_tltek.field_aeroo_mimetype__write_date
+#: model:ir.model.fields,field_description:report_aeroo_tltek.field_aeroo_template_line__write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: report_aeroo_tltek
+#: model_terms:ir.ui.view,arch_db:report_aeroo_tltek.act_report_xml_view1
+msgid "List Views"
+msgstr "Giao diện danh sách"
+
+#. module: report_aeroo_tltek
+#: code:addons/report_aeroo_tltek/controllers/main.py:0
+#, python-format
+msgid ""
+"Multiple aeroo reports found with the same name ({report_name}):\n"
+"\n"
+"{report_display_names}"
+msgstr ""
+"Đã tìm thấy nhiều báo cáo aeroo có cùng tên ({report_name}):\n"
+"\n"
+"{report_display_names}"
+
+#. module: report_aeroo_tltek
+#: model:ir.model.fields,field_description:report_aeroo_tltek.field_aeroo_mimetype__name
+msgid "Name"
+msgstr "Tên"
+
+#. module: report_aeroo_tltek
+#: code:addons/report_aeroo_tltek/controllers/main.py:0
+#, python-format
+msgid "No aeroo report found with the name {report_name}."
+msgstr "Không tìm thấy báo cáo aeroo với tên {report_name}."
+
+#. module: report_aeroo_tltek
+#: model:ir.model.fields,field_description:report_aeroo_tltek.field_ir_actions_report__aeroo_out_format_id
+#: model_terms:ir.ui.view,arch_db:report_aeroo_tltek.act_aeroo_report_xml_search_view
+msgid "Output Mime-type"
+msgstr "Đầu ra kiểu Mime"
+
+#. module: report_aeroo_tltek
+#: model:ir.model.fields,help:report_aeroo_tltek.field_ir_actions_report__aeroo_company_eval
+msgid ""
+"Python expression used to determine the company of the record being printed "
+"in the report."
+msgstr ""
+"Biểu thức Python được sử dụng để xác định công ty của bản ghi được in "
+" trong báo cáo."
+
+#. module: report_aeroo_tltek
+#: model:ir.model.fields,help:report_aeroo_tltek.field_ir_actions_report__aeroo_country_eval
+msgid ""
+"Python expression used to determine the country of the record being printed "
+"in the report."
+msgstr ""
+"Biểu thức Python được sử dụng để xác định quốc gia của bản ghi được in"
+" trong báo cáo."
+
+#. module: report_aeroo_tltek
+#: model:ir.model.fields,help:report_aeroo_tltek.field_ir_actions_report__aeroo_currency_eval
+msgid ""
+"Python expression used to determine the currency of the record being printed"
+" in the report."
+msgstr ""
+"Biểu thức Python được sử dụng để xác định tiền tệ của bản ghi được in"
+" trong báo cáo."
+
+#. module: report_aeroo_tltek
+#: model:ir.model.fields,help:report_aeroo_tltek.field_ir_actions_report__aeroo_lang_eval
+msgid ""
+"Python expression used to determine the language of the record being printed"
+" in the report."
+msgstr ""
+"Biểu thức Python được sử dụng để xác định ngôn ngữ của bản ghi được in"
+" trong báo cáo."
+
+#. module: report_aeroo_tltek
+#: model:ir.model.fields,help:report_aeroo_tltek.field_ir_actions_report__aeroo_tz_eval
+msgid ""
+"Python expression used to determine the timezone used for formatting dates "
+"and timestamps."
+msgstr ""
+"Biểu thức Python được sử dụng để xác định múi giờ được sử dụng để định dạng ngày tháng"
+" và mốc thời gian"
+
+#. module: report_aeroo_tltek
+#: model_terms:ir.ui.view,arch_db:report_aeroo_tltek.act_report_xml_view1
+msgid "Remove from the 'Print' menu"
+msgstr "Xóa khỏi nút 'In'"
+
+#. module: report_aeroo_tltek
+#: model_terms:ir.ui.view,arch_db:report_aeroo_tltek.act_report_xml_view1
+msgid "Remove the contextual action related this report"
+msgstr "Loại bỏ hành động theo ngữ cảnh liên quan đến báo cáo này"
+
+#. module: report_aeroo_tltek
+#: model:ir.model.fields,field_description:report_aeroo_tltek.field_aeroo_filename_line__report_id
+#: model:ir.model.fields,field_description:report_aeroo_tltek.field_aeroo_template_line__report_id
+#: model_terms:ir.ui.view,arch_db:report_aeroo_tltek.act_aeroo_report_xml_search_view
+msgid "Report"
+msgstr "Báo cáo"
+
+#. module: report_aeroo_tltek
+#: model:ir.model,name:report_aeroo_tltek.model_ir_actions_report
+msgid "Report Action"
+msgstr "Báo cáo hành động"
+
+#. module: report_aeroo_tltek
+#: model_terms:ir.ui.view,arch_db:report_aeroo_tltek.act_report_xml_view1
+msgid "Report Context"
+msgstr "Context Báo cáo"
+
+#. module: report_aeroo_tltek
+#: model:ir.model,name:report_aeroo_tltek.model_aeroo_mimetype
+msgid "Report Mime-Types"
+msgstr "Báo cáo loại Mime"
+
+#. module: report_aeroo_tltek
+#: model:ir.model.fields,field_description:report_aeroo_tltek.field_ir_actions_report__report_type
+msgid "Report Type"
+msgstr "Loại báo cáo"
+
+#. module: report_aeroo_tltek
+#: model_terms:ir.ui.view,arch_db:report_aeroo_tltek.act_aeroo_report_xml_search_view
+#: model_terms:ir.ui.view,arch_db:report_aeroo_tltek.act_aeroo_report_xml_view_tree
+msgid "Report xml"
+msgstr "Báo cáo xml"
+
+#. module: report_aeroo_tltek
+#: model:ir.actions.act_window,name:report_aeroo_tltek.action_aeroo_report_xml_tree
+msgid "Reports"
+msgstr "Báo cáo"
+
+#. module: report_aeroo_tltek
+#: model:ir.actions.report,name:report_aeroo_tltek.aeroo_sample_report
+msgid "Sample Report"
+msgstr "Báo cáo mẫu (in 1 record)"
+
+#. module: report_aeroo_tltek
+#: model:ir.actions.report,name:report_aeroo_tltek.aeroo_sample_report_multi
+msgid "Sample Report (from list view)"
+msgstr "Báo cáo mẫu (in nhiều record)"
+
+#. module: report_aeroo_tltek
+#: model:ir.actions.report,name:report_aeroo_tltek.aeroo_sample_report_ods
+msgid "Sample Spreadsheet"
+msgstr "Báo cáo mẫu (ods)"
+
+#. module: report_aeroo_tltek
+#: model_terms:ir.ui.view,arch_db:report_aeroo_tltek.act_report_xml_view1
+msgid "Security"
+msgstr "Bảo mật"
+
+#. module: report_aeroo_tltek
+#: model:ir.model.fields,field_description:report_aeroo_tltek.field_aeroo_filename_line__sequence
+#: model:ir.model.fields,field_description:report_aeroo_tltek.field_aeroo_template_line__sequence
+msgid "Sequence"
+msgstr "STT"
+
+#. module: report_aeroo_tltek
+#: model:ir.model.fields,field_description:report_aeroo_tltek.field_aeroo_template_line__template_data
+#: model_terms:ir.ui.view,arch_db:report_aeroo_tltek.act_report_xml_view1
+msgid "Template"
+msgstr "Mẫu"
+
+#. module: report_aeroo_tltek
+#: model_terms:ir.ui.view,arch_db:report_aeroo_tltek.act_report_xml_view1
+msgid "Template Content"
+msgstr "Nội dung mẫu"
+
+#. module: report_aeroo_tltek
+#: model:ir.model.fields,field_description:report_aeroo_tltek.field_ir_actions_report__aeroo_in_format
+#: model_terms:ir.ui.view,arch_db:report_aeroo_tltek.act_aeroo_report_xml_search_view
+msgid "Template Mime-type"
+msgstr "Mẫu loại Mime"
+
+#. module: report_aeroo_tltek
+#: model_terms:ir.ui.view,arch_db:report_aeroo_tltek.act_aeroo_report_xml_search_view
+msgid "Template Source"
+msgstr "Nguồn file mẫu"
+
+#. module: report_aeroo_tltek
+#: model_terms:ir.ui.view,arch_db:report_aeroo_tltek.act_report_xml_view1
+msgid "Template path"
+msgstr "Đường dẫn file mẫu"
+
+#. module: report_aeroo_tltek
+#: model:ir.model.fields,field_description:report_aeroo_tltek.field_ir_actions_report__aeroo_template_source
+msgid "Template source"
+msgstr "Nguồn file mẫu"
+
+#. module: report_aeroo_tltek
+#: model:ir.model.fields,field_description:report_aeroo_tltek.field_ir_actions_report__aeroo_template_line_ids
+msgid "Templates by Language"
+msgstr "Các mẫu theo ngôn ngữ"
+
+#. module: report_aeroo_tltek
+#: code:addons/report_aeroo_tltek/extra_functions.py:0
+#, python-format
+msgid ""
+"The function `format_currency` can not be evaluated without a currency. You "
+"must either define a currency in the field `Currency Evaluation` of the "
+"Aeroo report or call the function with a currency explicitely."
+msgstr ""
+"Không thể đánh giá hàm` format_currency` nếu không có đơn vị tiền tệ. Bạn "
+"phải xác định đơn vị tiền tệ trong trường` Đánh giá tiền tệ` của "
+"Báo cáo Aeroo hoặc gọi hàm bằng đơn vị tiền tệ một cách rõ ràng."
+
+#. module: report_aeroo_tltek
+#: model:ir.model.fields,help:report_aeroo_tltek.field_ir_actions_report__report_type
+msgid ""
+"The type of the report that will be rendered, each one having its own "
+"rendering method. HTML means the report will be opened directly in your "
+"browser PDF means the report will be rendered using Wkhtmltopdf and "
+"downloaded by the user."
+msgstr ""
+"Loại báo cáo sẽ được hiển thị, mỗi loại có phương thức kết xuất riêng. HTML "
+"có nghĩa là báo cáo sẽ được mở trực tiếp trong trình duyệt PDF của bạn có "
+"nghĩa là báo cáo sẽ được hiển thị bằng Wkhtmltopdf và được người dùng tải "
+"xuống."
+
+#. module: report_aeroo_tltek
+#: model:ir.model.fields,field_description:report_aeroo_tltek.field_ir_actions_report__aeroo_tz_eval
+msgid "Timezone Evaluation"
+msgstr "Múi giờ"

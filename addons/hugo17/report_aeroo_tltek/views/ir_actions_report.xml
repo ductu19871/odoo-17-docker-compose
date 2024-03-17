@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+	<record model="ir.ui.view" id="act_report_xml_in_report_aeroo">
+		<field name="name">act_report_xml_in_report_aeroo</field>
+		<field name="model">ir.actions.report</field>
+		<field name="inherit_id" ref="base.act_report_xml_view"/>
+		<field name="arch" type="xml">
+		
+		
+		    
+		    <xpath expr="//field[@name='report_type']" position="after">
+		    	<field name="aeroo_in_format" 
+		    		
+
+		    		options="{'no_create': True, 'no_open': True}"/>
+	            <field name="aeroo_out_format_id" domain="[('compatible_types', '=', aeroo_in_format)]"
+	            	
+		    		options="{'no_create': True, 'no_open': True}"/>
+		    	<field name="open_browser"/>
+		    </xpath>
+			
+			<xpath expr="//page[@name='security']" position="before">
+				<page string="Aeroo Generic" >
+				
+		            <group string="Template">
+		                <field name="aeroo_template_source" 
+							/>
+		                <field name="aeroo_template_data"
+		                    string="Template Content"
+							/>
+		                <field name="aeroo_template_path"
+		                    string="Template path"
+							/>
+		                <field name="aeroo_template_line_ids" nolabel="1" colspan="2"
+							>
+		                    <tree>
+		                        <field name="sequence" widget="handle"/>
+		                        <field name="lang_id" options="{'no_create': True, 'no_open': True}"/>
+		                        <field name="company_id" options="{'no_create': True, 'no_open': True}"/>
+		                        <field name="template_data" filename="template_filename"/>
+		                        <field name="template_filename" invisible="1"/>
+		                    </tree>
+		                    <form>
+		                        <group>
+		                            <group>
+		                                <field name="lang_id" options="{'no_create': True, 'no_open': True}"/>
+		                                <field name="company_id" options="{'no_create': True, 'no_open': True}"/>
+		                                <field name="template_data" filename="template_filename"/>
+		                                <field name="template_filename" invisible="1"/>
+		                            </group>
+		                        </group>
+		                    </form>
+		                </field>
+		            </group>
+		            <group string="Report Context">
+		                <field name="aeroo_lang_eval"/>
+		                <field name="aeroo_tz_eval"/>
+		                <field name="aeroo_company_eval"/>
+		                <field name="aeroo_country_eval"/>
+		                <field name="aeroo_currency_eval"/>
+		            </group>
+		            <group string="List Views">
+		                <field name="multi" string="Generate Report From Record List"/>
+		            </group>
+		            <group string="Attachments" >
+		                <field name="aeroo_filename_per_lang"/>
+		                <field name="aeroo_filename_line_ids"
+		                    nolabel="1" colspan="2"
+							>
+		                    <tree editable="bottom">
+		                        <field name="sequence" widget="handle"/>
+		                        <field name="lang_id" options="{'no_create': True, 'no_open': True}"/>
+		                        <field name="filename"/>
+		                    </tree>
+		                </field>
+		                <field name="attachment" />
+		                <field name="attachment_use"/>
+		            </group>
+		        </page>
+			</xpath>
+		</field>
+	</record>
+
+</odoo>

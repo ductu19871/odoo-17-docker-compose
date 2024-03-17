@@ -1,0 +1,31 @@
+<odoo> 
+    <record id="journal_hcm" model="account.journal">
+        <field name="name">Customer Invoices HCM</field>
+        <field name="code">HCM</field>
+        <field name="type">sale</field>
+        <field name="warehouse_id" ref="hugocustom.warehouse_hcm"></field>
+    </record>
+
+    <record id="journal_bpc" model="account.journal">
+        <field name="name">Customer Invoices Bình Phước</field>
+        <field name="code">BPC</field>
+        <field name="type">sale</field>
+        <field name="warehouse_id" ref="hugocustom.warehouse_bpc"></field>
+    </record>
+
+
+    <record id="journal_purchase_hcm" model="account.journal">
+        <field name="name">Vendor Bills HCM</field>
+        <field name="code">BILLHCM</field>
+        <field name="type">purchase</field>
+        <field name="warehouse_id" ref="hugocustom.warehouse_hcm"></field>
+    </record>
+
+    <record id="journal_purchase_bpc" model="account.journal">
+        <field name="name">Vendor Bills Bình Phước</field>
+        <field name="code">BILLBPC</field>
+        <field name="type">purchase</field>
+        <field name="warehouse_id" ref="hugocustom.warehouse_bpc"></field>
+    </record>
+
+</odoo>

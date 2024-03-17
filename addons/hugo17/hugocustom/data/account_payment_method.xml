@@ -1,0 +1,19 @@
+<odoo>
+    <data noupdate="0">
+        <record  model="account.payment.method" id="account_payment_method_1">
+            <field name="name">Tiền mặt</field>
+            <field name="payment_type">inbound</field>
+            <field name="code">sale-cash</field>
+        </record>
+        <record  model="account.payment.method" id="account_payment_method_2">
+            <field name="name">Chuyển khoản</field>
+            <field name="payment_type">inbound</field>
+            <field name="code">sale-ck</field>
+        </record>
+        <record  model="account.payment.method" id="account_payment_method_3">
+            <field name="name">Giao hàng thu tiền</field>
+            <field name="payment_type">inbound</field>
+            <field name="code">sale-ghtt</field>
+        </record>
+    </data>
+</odoo>

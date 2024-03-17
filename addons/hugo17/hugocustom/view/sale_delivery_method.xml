@@ -1,0 +1,39 @@
+<odoo>
+    <record id="sale_delivery_method_form" model="ir.ui.view">
+        <field name="name">sale.delivery.method.form</field>
+        <field name="model">sale.delivery.method</field>
+        <field name="arch" type="xml">
+            <form >
+                <sheet>
+                    <group>
+                        <field name="name" />
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" groups="base.group_user"/>
+                    <field name="message_ids"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="sale_delivery_method_tree" model="ir.ui.view">
+        <field name="name">sale.delivery.method.tree</field>
+        <field name="model">sale.delivery.method</field>
+        <field name="arch" type="xml">
+            <tree >
+                <field name="name" />
+                <field name="active" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_sale_delivery_method" model="ir.actions.act_window">
+        <field name="name">Delivery Methods</field>
+        <field name="res_model">sale.delivery.method</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    
+    <menuitem id="menu_sale_delivery_method" name="Delivery Methods" parent="sale.menu_sale_general_settings" action="action_sale_delivery_method" sequence="100"/>
+
+</odoo>

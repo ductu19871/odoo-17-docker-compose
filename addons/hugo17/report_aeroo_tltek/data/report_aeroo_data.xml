@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <record model="aeroo.mimetype" id="aeroo_mimetype_odt_odt" >
+            <field name="name">ODF Text Document (.odt)</field>
+            <field name="code">odt</field>
+            <field name="compatible_types">odt</field>
+        </record>
+
+        <record model="aeroo.mimetype" id="aeroo_mimetype_ods_ods" >
+            <field name="name">ODF Spreadsheet (.ods)</field>
+            <field name="code">ods</field>
+            <field name="compatible_types">ods</field>
+        </record>
+
+        <record model="aeroo.mimetype" id="aeroo_mimetype_pdf_odt" >
+            <field name="name">PDF - Portable Document Format (.pdf)</field>
+            <field name="code">pdf</field>
+            <field name="compatible_types">odt</field>
+        </record>
+
+        <record model="aeroo.mimetype" id="aeroo_mimetype_pdf_ods" >
+            <field name="name">PDF - Portable Document Format (.pdf)</field>
+            <field name="code">pdf</field>
+            <field name="compatible_types">ods</field>
+        </record>
+
+        <record model="aeroo.mimetype" id="aeroo_mimetype_doc_odt" >
+            <field name="name">Microsoft Word 97/2000/XP (.doc)</field>
+            <field name="code">doc</field>
+            <field name="compatible_types">odt</field>
+        </record>
+        
+        <record model="aeroo.mimetype" id="aeroo_mimetype_docx_odt" >
+            <field name="name">Microsoft Word (.docx)</field>
+            <field name="code">docx</field>
+            <field name="compatible_types">odt</field>
+        </record>
+
+        <record model="aeroo.mimetype" id="aeroo_mimetype_xls_ods" >
+            <field name="name">Microsoft Excel 97/2000/XP (.xls)</field>
+            <field name="code">xls</field>
+            <field name="compatible_types">ods</field>
+        </record>
+        
+        <record model="aeroo.mimetype" id="aeroo_mimetype_xlsx_ods" >
+            <field name="name">Microsoft Excel (.xlsx)</field>
+            <field name="code">xlsx</field>
+            <field name="compatible_types">ods</field>
+        </record>
+
+        <record model="aeroo.mimetype" id="aeroo_mimetype_csv_ods" >
+            <field name="name">Text CSV (.csv)</field>
+            <field name="code">csv</field>
+            <field name="compatible_types">ods</field>
+        </record>
+    </data>
+</odoo>
