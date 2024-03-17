@@ -1,0 +1,5 @@
+
+
+docker build -t odoo-17-docker-compose-odoo17 .
+sudo apt install libreoffice
+libreoffice --version
