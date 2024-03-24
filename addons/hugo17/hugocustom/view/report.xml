@@ -1,5 +1,5 @@
 <odoo>
-    <record id="action_purchase_report_report_aeroo" model="ir.actions.report">
+    <!-- <record id="action_purchase_report_report_aeroo" model="ir.actions.report">
         <field name="name">Purchase Report</field>
         <field name="type">ir.actions.report</field>
         <field name="model">sale.order</field>
@@ -11,7 +11,7 @@
         <field name="aeroo_template_source">file</field>
    		<field name="print_report_name">'test'</field>
    		<field name="binding_model_id" ref="sale.model_sale_order"/>
-    </record>
+    </record> -->
 
     <record id="action_sale_report_aeroo" model="ir.actions.report">
         <field name="name">Sale Report</field>

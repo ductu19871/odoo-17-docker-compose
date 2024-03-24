@@ -1,5 +1,7 @@
 
 
 docker build -t odoo-17-docker-compose-odoo17 .
-sudo apt install libreoffice
+apt update &&  apt upgrade -y
+apt install libreoffice
 libreoffice --version
+/mnt/my-addons/hugobase/data/

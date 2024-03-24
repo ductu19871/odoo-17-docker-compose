@@ -1,13 +1,11 @@
 <odoo> 
-    <record id="warehouse_hcm" model="stock.warehouse">
-        <!-- <field name="partner_id" ref="base.main_partner"/> -->
+    <!-- <record id="warehouse_hcm" model="stock.warehouse">
         <field name="name">Kho HCM</field>
         <field name="code">HCM</field>
-    </record>
-
-    <!-- <record id="warehouse_bpc" model="stock.warehouse">
+    </record> -->
+    <record id="warehouse_bpc" model="stock.warehouse">
         <field name="name">Kho Bình Phước</field>
         <field name="code">BPC</field>
-    </record> -->
+    </record>
 
 </odoo>

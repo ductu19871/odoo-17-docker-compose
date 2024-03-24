@@ -1,0 +1,10 @@
+[options]
+   ; This is the password that allows database operations:
+   admin_passwd = 228787
+   db_host = False
+   db_port = False
+   db_user = odoo
+   db_password = 1
+   http_port = 13837
+   db_name = o17_hugo
+   longpolling_port = 13838

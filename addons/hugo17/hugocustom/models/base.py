@@ -24,7 +24,7 @@ class Base(models.AbstractModel):
     
     def format_amount_wo_symbol(self, amount, currency=None, lang_code=False, env=None):
         if not currency:
-            currency = self.currency_id
+            currency = self.currency_id or self.env['res.currency'].search([('name','=', 'VND')])
         if not env:
             env = self.env
         fmt = "%.{0}f".format(currency.decimal_places)

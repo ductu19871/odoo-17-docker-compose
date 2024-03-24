@@ -7,11 +7,12 @@
     "author": "NDT ",
     "website": "",
     "category": "Generic",
-    "depends": ['sale','sale_management','purchase', 'stock', 'account', 'l10n_vn'],
+    "depends": ['sale','sale_management','purchase', 'stock', 'account', 'sale_pdf_quote_builder', 'l10n_vn'],
     "license": "LGPL-3",
     "data": [
         "data/data.xml",
         "data/ir_sequence.xml",
+        "data/report.xml",
         # "security/ir.model.access.csv",
         # "security/ir_rule.xml",
         # "data/stock_data.xml",
