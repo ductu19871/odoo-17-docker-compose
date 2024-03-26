@@ -1,0 +1,2 @@
+id,journal_id/id,name,sequence,payment_method_id/id
+__export__.apml_mt1,__export__.account_journal_exam_1,Manual,10,account.account_payment_method_manual_in

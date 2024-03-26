@@ -1,0 +1,3 @@
+id,default_account_id/id,name,sequence,code,type,inbound_payment_method_line_ids
+__export__.account_journal_exam_1,__export__.account_account_aa1,Exambank,10,EXA,Bank,,
+__export__.account_journal_exam_2,__export__.account_account_aa2,Sacombank,10,SAC,Bank,,
