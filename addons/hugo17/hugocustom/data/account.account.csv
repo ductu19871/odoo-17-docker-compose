@@ -1,4 +1,4 @@
 id,currency_id,name,code,account_type
-__export__.account_account_aa1,,Tiên Phong Bank - TPB,1124,Bank and Cash
-__export__.account_account_aa2,,Ngân hàng SHB,1125,Bank and Cash
-__export__.account_account_aa3,,VPBANK,1126,Bank and Cash
+__export__.account_account_aa1,,Tiên Phong Bank - TPB,11270,Bank and Cash
+__export__.account_account_aa2,,Ngân hàng SHB,11271,Bank and Cash
+__export__.account_account_aa3,,VPBANK,11272,Bank and Cash

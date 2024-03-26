@@ -7,7 +7,7 @@
     "author": "NDT ",
     "website": "",
     "category": "Generic",
-    "depends": ['sale','purchase', 'stock', 'account', 'report_aeroo_tltek'],
+    "depends": ['sale','purchase', 'stock', 'account', 'report_aeroo_tltek','hugobase'],
     "license": "LGPL-3",
     "data": [
         "data/account.account.csv",
