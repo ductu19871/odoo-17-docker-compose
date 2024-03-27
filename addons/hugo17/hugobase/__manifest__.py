@@ -10,7 +10,8 @@
     "depends": ['sale','sale_management','purchase', 'stock', 'account', 'sale_pdf_quote_builder', 'l10n_vn'],
     "license": "LGPL-3",
     "data": [
-       
+        # "data/account.account.csv",
+        # "data/account.journal.csv",
         "data/data.xml",
         "data/ir_sequence.xml",
         "data/report.xml",

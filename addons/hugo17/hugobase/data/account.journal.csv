@@ -1,0 +1,4 @@
+id,default_account_id/id,name,sequence,code,type,inbound_payment_method_line_ids,outbound_payment_method_line_ids
+__export__.account_journal_aj1,__export__.account_account_aa1,Tiên Phong Bank,10,TPB,Bank,,,
+__export__.account_journal_aj_2,__export__.account_account_aa2,Ngân hàng SHB,10,SHB,Bank,,,
+__export__.account_journal_aj_3,__export__.account_account_aa3,VPBANK,10,VPB,Bank,,,

@@ -1,0 +1,42 @@
+<odoo>
+
+
+id,default_account_id/id,name,sequence,code,type,inbound_payment_method_line_ids,outbound_payment_method_line_ids
+__export__.account_journal_aj1,__export__.account_account_aa1,Tiên Phong Bank,10,TPB,Bank,,,
+__export__.account_journal_aj_2,__export__.account_account_aa2,Ngân hàng SHB,10,SHB,Bank,,,
+__export__.account_journal_aj_3,__export__.account_account_aa3,VPBANK,10,VPB,Bank,,,
+
+id,currency_id,name,code,account_type
+__export__.account_account_aa1,,Tiên Phong Bank - TPB,1128,Bank and Cash
+__export__.account_account_aa2,,Ngân hàng SHB,1129,Bank and Cash
+__export__.account_account_aa3,,VPBANK,11210,Bank and Cash
+
+
+
+
+     <record id="hugo_aa1" model="account.account">
+        <field name="name">Tiên Phong Bank - TPB</field>
+        <field name="code">TPB1</field>
+        <field name="account_type">asset_cash</field>
+    </record>
+
+    <record id="hugo_aj1" model="account.journal">
+        <field name="name">Tiên Phong Bank</field>
+        <field name="code">TPB1</field>
+        <field name="type">bank</field>
+        <field name="default_account_id" ref="hugo_aa1"></field>
+        <field name="inbound_payment_method_line_ids" eval="False"></field>
+        <field name="outbound_payment_method_line_ids" eval="False"></field>
+    </record>
+
+    <record id="apml_xml_1" model="account.payment.method.line">
+        <field name="name">Manual</field>
+        <field name="sequence">10</field>
+        <field name="journal_id" ref="hugo_aj1"></field>
+        <field name="payment_method_id" ref="account.account_payment_method_manual_in"></field>
+        <field name="payment_account_id" ref="hugo_aa1"></field>
+    </record>
+
+   
+
+</odoo>
