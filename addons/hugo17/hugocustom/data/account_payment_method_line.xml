@@ -1,35 +1,20 @@
 <odoo>
-
-
-id,default_account_id/id,name,sequence,code,type,inbound_payment_method_line_ids,outbound_payment_method_line_ids
-__export__.account_journal_aj1,__export__.account_account_aa1,Tiên Phong Bank,10,TPB,Bank,,,
-__export__.account_journal_aj_2,__export__.account_account_aa2,Ngân hàng SHB,10,SHB,Bank,,,
-__export__.account_journal_aj_3,__export__.account_account_aa3,VPBANK,10,VPB,Bank,,,
-
-id,currency_id,name,code,account_type
-__export__.account_account_aa1,,Tiên Phong Bank - TPB,1128,Bank and Cash
-__export__.account_account_aa2,,Ngân hàng SHB,1129,Bank and Cash
-__export__.account_account_aa3,,VPBANK,11210,Bank and Cash
-
-
-
-
-     <record id="hugo_aa1" model="account.account">
+    <record id="hugo_aa1" model="account.account">
         <field name="name">Tiên Phong Bank - TPB</field>
-        <field name="code">TPB1</field>
+        <field name="code">1128</field>
         <field name="account_type">asset_cash</field>
     </record>
 
     <record id="hugo_aj1" model="account.journal">
         <field name="name">Tiên Phong Bank</field>
-        <field name="code">TPB1</field>
+        <field name="code">TPB</field>
         <field name="type">bank</field>
         <field name="default_account_id" ref="hugo_aa1"></field>
         <field name="inbound_payment_method_line_ids" eval="False"></field>
         <field name="outbound_payment_method_line_ids" eval="False"></field>
     </record>
 
-    <record id="apml_xml_1" model="account.payment.method.line">
+    <record id="hugo_apml_1_in" model="account.payment.method.line">
         <field name="name">Manual</field>
         <field name="sequence">10</field>
         <field name="journal_id" ref="hugo_aj1"></field>
@@ -37,6 +22,79 @@ __export__.account_account_aa3,,VPBANK,11210,Bank and Cash
         <field name="payment_account_id" ref="hugo_aa1"></field>
     </record>
 
-   
+    <record id="hugo_apml_1_out" model="account.payment.method.line">
+        <field name="name">Manual</field>
+        <field name="sequence">10</field>
+        <field name="journal_id" ref="hugo_aj1"></field>
+        <field name="payment_method_id" ref="account.account_payment_method_manual_out"></field>
+        <field name="payment_account_id" ref="hugo_aa1"></field>
+    </record>
+
+    <!-- ngan hang 2 -->
+
+    <record id="hugo_aa2" model="account.account">
+        <field name="name">Ngân hàng SHB</field>
+        <field name="code">1129</field>
+        <field name="account_type">asset_cash</field>
+    </record>
+
+    <record id="hugo_aj2" model="account.journal">
+        <field name="name">Ngân hàng SHB</field>
+        <field name="code">SHB</field>
+        <field name="type">bank</field>
+        <field name="default_account_id" ref="hugo_aa2"></field>
+        <field name="inbound_payment_method_line_ids" eval="False"></field>
+        <field name="outbound_payment_method_line_ids" eval="False"></field>
+    </record>
+
+    <record id="hugo_apml_2_in" model="account.payment.method.line">
+        <field name="name">Manual</field>
+        <field name="sequence">10</field>
+        <field name="journal_id" ref="hugo_aj2"></field>
+        <field name="payment_method_id" ref="account.account_payment_method_manual_in"></field>
+        <field name="payment_account_id" ref="hugo_aa2"></field>
+    </record>
+
+    <record id="hugo_apml_2_out" model="account.payment.method.line">
+        <field name="name">Manual</field>
+        <field name="sequence">10</field>
+        <field name="journal_id" ref="hugo_aj2"></field>
+        <field name="payment_method_id" ref="account.account_payment_method_manual_out"></field>
+        <field name="payment_account_id" ref="hugo_aa2"></field>
+    </record>
+
+    <!-- ngan hang 3 -->
+
+
+    <record id="hugo_aa3" model="account.account">
+        <field name="name">VPBANK</field>
+        <field name="code">11210</field>
+        <field name="account_type">asset_cash</field>
+    </record>
+
+    <record id="hugo_aj3" model="account.journal">
+        <field name="name">VPBANK</field>
+        <field name="code">VPB</field>
+        <field name="type">bank</field>
+        <field name="default_account_id" ref="hugo_aa3"></field>
+        <field name="inbound_payment_method_line_ids" eval="False"></field>
+        <field name="outbound_payment_method_line_ids" eval="False"></field>
+    </record>
+
+    <record id="hugo_apml_3_in" model="account.payment.method.line">
+        <field name="name">Manual</field>
+        <field name="sequence">10</field>
+        <field name="journal_id" ref="hugo_aj3"></field>
+        <field name="payment_method_id" ref="account.account_payment_method_manual_in"></field>
+        <field name="payment_account_id" ref="hugo_aa3"></field>
+    </record>
+
+    <record id="hugo_apml_3_out" model="account.payment.method.line">
+        <field name="name">Manual</field>
+        <field name="sequence">10</field>
+        <field name="journal_id" ref="hugo_aj3"></field>
+        <field name="payment_method_id" ref="account.account_payment_method_manual_out"></field>
+        <field name="payment_account_id" ref="hugo_aa3"></field>
+    </record>
 
 </odoo>
