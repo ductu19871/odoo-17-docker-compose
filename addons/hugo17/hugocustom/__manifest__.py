@@ -12,7 +12,7 @@
     "data": [
         "data/account.account.csv",
         "data/account.journal.csv",
-        # "data/account.payment.method.line.csv",
+        "data/account.payment.method.line.csv",
         "security/ir.model.access.csv",
         # "security/ir_rule.xml",
         "data/stock_data.xml",
