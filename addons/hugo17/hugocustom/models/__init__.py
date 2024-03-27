@@ -1,4 +1,5 @@
 from . import res_users
+from . import res_partner
 from . import product_product
 from . import account_journal
 from . import account_move
