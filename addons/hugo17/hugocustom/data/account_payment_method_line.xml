@@ -97,4 +97,16 @@
         <field name="payment_account_id" ref="hugo_aa3"></field>
     </record>
 
+    <!-- 4 -->
+
+    <record id="hugo_aj4" model="account.journal">
+        <field name="name">LZD</field>
+        <field name="code">LZD</field>
+        <field name="type">sale</field>
+        <!-- <field name="default_account_id" ref="hugo_aa3"></field>
+        <field name="inbound_payment_method_line_ids" eval="False"></field>
+        <field name="outbound_payment_method_line_ids" eval="False"></field> -->
+    </record>
+
+
 </odoo>
