@@ -9,10 +9,15 @@
                     <field name="add_state" />
                     <field name="source_id" />
                     <field name="quotation_term" />
-                    <field name="payment_method_id" />
+                 
+                </field>
+                <field name="sale_order_template_id" position="after">
                     <field name="advance_money" />
                     <field name="delivery_method_id" />
-                    <field name="note2" />
+                    <field name="payment_method_id" />
+                    <!-- <field name="note2" /> -->
+                    <field name="delivery_interval" />
+                    <field name="ckt" />
                 </field>
             </field>
     </record>

@@ -1,0 +1,20 @@
+<odoo>
+    <record id="view_out_invoice_tree" model="ir.ui.view">
+            <field name="name">ndt.account.out.invoice.tree</field>
+            <field name="model">account.move</field>
+            <field name="inherit_id" ref="account.view_invoice_tree"/>
+            <field name="mode">primary</field>
+            <field name="arch" type="xml">
+                <!-- <xpath expr="//tree" position="attributes">
+                    <attribute name="banner_route">/onboarding/account_invoice</attribute>
+                </xpath> -->
+                <field name="ref" position="replace" />
+                <field name="invoice_partner_display_name" position="replace" >
+                    <field name="partner_id" />
+                </field>
+                <field name="name" position="after">
+                    <field name="ref" />
+                </field>
+            </field>
+        </record>
+</odoo>
