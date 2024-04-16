@@ -5,6 +5,14 @@ from odoo.exceptions import RedirectWarning, UserError, ValidationError, AccessE
 class AM(models.Model):
     _inherit = 'account.move.line'
 
+    # _sql_constraints = [
+    #  (
+    #         "check_non_accountable_fields_null",
+    #         "CHECK(1=1)",
+    #         "Forbidden balance or account on non-accountable line"
+    #     )
+    # ]
+
     @api.model_create_multi
     def create(self, vals):
         # for val in vals:

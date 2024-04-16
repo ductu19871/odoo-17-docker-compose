@@ -1,29 +1,21 @@
 from odoo import api, fields, models, _
 from odoo.exceptions import RedirectWarning, UserError, ValidationError, AccessError
 
+class account_partial_reconcile(models.Model):
+    _inherit = 'account.partial.reconcile'
 
-
-class AML(models.Model):
-    _inherit = 'account.move.line'
-    
-    _sql_constraints = [
-     (
-            "check_non_accountable_fields_null",
-            "CHECK(1=1)",
-            "Forbidden balance or account on non-accountable line"
-        )
-    ]
-
-    #  "check_non_accountable_fields_null",
-    #         "CHECK(display_type NOT IN ('line_section', 'line_note') OR (amount_currency = 0 AND debit = 0 AND credit = 0 AND account_id IS NULL))",
-    #         "Forbidden balance or account on non-accountable line"
-    ndt_test = fields.Char()
+    def unlink(self):
+        super().unlink()
+        pass
    
 
-   
+class AM(models.Model):
+    _inherit = 'account.move'
 
-# class AM(models.Model):
-#     _inherit = 'account.move'
+    def write(self, vals):
+        if 'payment_state' in vals:
+            print ('akdfjdkfjdkf')
+        return super().write(vals)
 
 #     @api.model
 #     def _search_default_journal(self, journal_types):
