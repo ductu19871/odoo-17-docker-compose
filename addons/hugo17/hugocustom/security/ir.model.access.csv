@@ -1,4 +1,6 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_sale_delivery_method,access_sale_delivery_method,model_sale_delivery_method,base.group_user,1,0,0,0
 access_sale_delivery_method_manager,access_sale_delivery_method_manager,model_sale_delivery_method,sales_team.group_sale_manager,1,1,1,1
+access_new_ndt_webhook_user,access_new_data_webhook_user,model_ndt_webhook,base.group_user,1,1,1,1
+
 
