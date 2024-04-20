@@ -37,7 +37,7 @@ class Base(models.AbstractModel):
     def format_amount_wo_symbol_vi(self, amount, currency=None, env=None, swap_punctuation=True):
         rs = self.format_amount_wo_symbol(amount, currency=currency, lang_code='vi_VN', env=env)
         if swap_punctuation:
-            rs = rs.split('.')
+            rs = rs.split('.')# bảng thân . là phần ngàn
             rs[-1] = rs[-1].replace(',', '.')
             rs = ','.join(rs)
         return rs

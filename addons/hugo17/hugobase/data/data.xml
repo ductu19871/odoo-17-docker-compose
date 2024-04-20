@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data noupdate="0">
-        <function model="res.lang" name="active_a_lang"/>
-        <!-- <function model="res.lang" name="active_a_lang" eval="('vi_VN',)"/> -->
+        <!-- <function model="res.lang" name="active_a_lang"/> -->
+        <function model="res.lang" name="active_a_lang" eval="('vi_VN',)"/>
     </data>
 </odoo>

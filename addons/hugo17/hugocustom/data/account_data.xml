@@ -1,4 +1,5 @@
 <odoo> 
+    <!-- không dùng -->
     <record id="journal_hcm" model="account.journal">
         <field name="name">Customer Invoices HCM</field>
         <field name="code">HCM</field>
