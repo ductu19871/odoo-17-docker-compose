@@ -21,7 +21,9 @@ class SO(models.Model):
         return super(SO, self.with_context(overwrite_user_warehouse_id = self.warehouse_id ))._prepare_invoice()
     
     def gen_dktt(self):#điều kiện thanh toán
-        if self.ckt:
+        if self.ckt == 100:
+            return f'Chuyển khoản {self.ckt}% khi đặt hàng'
+        elif self.ckt:
             return f'Chuyển khoản {self.ckt}% khi đặt hàng, phần còn lại sẽ thanh toán khi có thông báo giao hàng'
         else:
             return 'Thanh toán khi có thông báo giao hàng'
