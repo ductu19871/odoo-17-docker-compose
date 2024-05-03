@@ -15,7 +15,7 @@ class SO(models.Model):
     advance_money = fields.Monetary(currency_field='currency_id')#Tiền cọc
     delivery_method_id = fields.Many2one('sale.delivery.method')
     note2 = fields.Text()
-    ckt = fields.Integer(default=0, string='Chuyển khoản trước')
+    ckt = fields.Integer(default=100, string='Chuyển khoản trước')
     delivery_interval = fields.Char(default='05~07', string='Giao hàng trong vòng')
     def _prepare_invoice(self):
         return super(SO, self.with_context(overwrite_user_warehouse_id = self.warehouse_id ))._prepare_invoice()

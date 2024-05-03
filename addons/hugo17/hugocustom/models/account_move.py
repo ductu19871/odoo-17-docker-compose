@@ -5,6 +5,15 @@ from odoo.exceptions import RedirectWarning, UserError, ValidationError, AccessE
 class AM(models.Model):
     _inherit = 'account.move'
 
+    ndt_payment_ids = fields.One2many('account.payment', 'move_id')
+    count_ndt_payment = fields.Integer(compute='_compute_count_ndt_payment')
+    
+    def _compute_count_ndt_payment(self):
+        for r in self:
+            r.count_ndt_payment = len(r.ndt_payment_ids)
+        
+   
+
     # @api.model
     # def _search_default_journal(self, journal_types):
     #     company_id = self._context.get('default_company_id', self.env.company.id)

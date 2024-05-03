@@ -21,4 +21,18 @@ records.env['sale.order'].search(['&amp;','|',('user_id','=',user.id),('user_id'
 records.env['sale.order'].search(['|',('user_id','=',user.id),('user_id','=',False),('date_order','&gt;','2024-01-01')])
         </field>
     </record>
+
+
+    <record id="model_ir_rule_search_domain2" model="ir.actions.server">
+        <field name="name">Search demo2</field>
+        <field name="model_id" ref="base.model_ir_rule"/>
+        <field name="binding_model_id" ref="base.model_ir_rule"/>
+        <field name="binding_view_types">list,form</field>
+        <field name="state">code</field>
+        <field name="code">
+records.env['sale.order'].search(['|',('user_id','=',user.id),('user_id','=',False),('date_order','&gt;','2024-01-01')])
+        </field>
+    </record>
+
+    
 </odoo>

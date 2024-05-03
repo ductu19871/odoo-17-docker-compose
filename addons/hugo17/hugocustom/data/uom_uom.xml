@@ -1,0 +1,22 @@
+<odoo>
+    <record id="product_uom_categ_cai" model="uom.category">
+        <field name="name">Cái</field>
+    </record>
+    <record id="product_uom_cai" model="uom.uom">
+            <field name="category_id" ref="product_uom_categ_cai"/>
+            <field name="name">Cái</field>
+            <field name="factor" eval="1.0"/>
+            <field name="uom_type">reference</field>
+    </record>
+
+    <record id="product_uom_categ_cuon" model="uom.category">
+        <field name="name">Cuộn</field>
+    </record>
+    <record id="product_uom_cuon" model="uom.uom">
+            <field name="category_id" ref="product_uom_categ_cuon"/>
+            <field name="name">Cuộn</field>
+            <field name="factor" eval="1.0"/>
+            <field name="uom_type">reference</field>
+    </record>
+
+</odoo>

@@ -11,7 +11,7 @@ class account_partial_reconcile(models.Model):
 
 class AM(models.Model):
     _inherit = 'account.move'
-
+    
     def write(self, vals):
         if 'payment_state' in vals:
             print ('akdfjdkfjdkf')
