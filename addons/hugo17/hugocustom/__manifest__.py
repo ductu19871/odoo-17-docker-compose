@@ -16,6 +16,7 @@
         "data/stock_data.xml",
         "data/uom_uom.xml",
         "data/test.xml",
+        "data/cron.xml",
         # "data/account_data.xml",
         "data/sale_delivery_method_data.xml",
         "data/account_payment_method.xml",

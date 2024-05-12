@@ -3,29 +3,32 @@ from odoo.exceptions import RedirectWarning, UserError, ValidationError, AccessE
 
 
 class AM(models.Model):
-    _inherit = 'account.move'
+    _inherit = 'account.move.line'
 
-    ndt_payment_ids = fields.One2many('account.payment', 'move_id')
-    count_ndt_payment = fields.Integer(compute='_compute_count_ndt_payment')
-    is_trigger = fields.Boolean()
+    migrate_account_id = fields.Integer()
 
-    @api.depends('is_trigger')
-    def _compute_payment_state(self):
-        return super()._compute_payment_state()
-    
-    def recompute_payment_state(self, limit=0, offset=0, add_domain=[]):
-        dm = [('move_type', 'in', ('out_invoice', 'in_invoice'))]
-        dm +=add_domain
-        account_moves = self.env['account.move'].search(dm, limit =limit, offset=offset)
-        n_split = 1000
-        for r in account_moves:
-            r.write({'state': r.state})
-    
-    def _compute_count_ndt_payment(self):
-        for r in self:
-            r.count_ndt_payment = len(r.ndt_payment_ids)
-        
-   
+    # _sql_constraints = [
+    #  (
+    #         "check_non_accountable_fields_null",
+    #         "CHECK(1=1)",
+    #         "Forbidden balance or account on non-accountable line"
+    #     )
+    # ]
+
+    # @api.model_create_multi
+    # def create(self, vals):
+    #     # for val in vals:
+    #     #     if 'account_id' in val and val.get('account_id'):
+    #     #         print(1)
+    #     # if 'account_id' in vals:
+    #     #     print (2222)
+    #     return super().create(vals)
+
+
+    # def write(self, vals):
+    #     if 'account_id' in vals:
+    #         print (2222)
+    #     return super().write(vals)
 
     # @api.model
     # def _search_default_journal(self, journal_types):
