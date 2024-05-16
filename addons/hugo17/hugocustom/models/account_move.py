@@ -15,11 +15,21 @@ class AM(models.Model):
     
     def recompute_payment_state(self, limit=0, offset=0, add_domain=[]):
         dm = [('move_type', 'in', ('out_invoice', 'in_invoice'))]
-        dm +=add_domain
-        account_moves = self.env['account.move'].search(dm, limit =limit, offset=offset)
-        n_split = 1000
-        for r in account_moves:
-            r.write({'state': r.state})
+        dm += add_domain
+        account_moves = self.env['account.move'].search(dm, limit=limit, offset=offset)
+        
+        n_split = 300  # Number of records to process in each batch
+        total_moves = len(account_moves)
+        for i in range(0, total_moves, n_split):
+            batch_moves = account_moves[i:i + n_split]  # Get a batch of records
+            
+            # Update the state for each record in the batch
+            for move in batch_moves:
+                move.write({'state': move.state})
+            
+            # Commit the changes
+            self.env.cr.commit()
+            print ('i đã commit', i)
     
     def _compute_count_ndt_payment(self):
         for r in self:

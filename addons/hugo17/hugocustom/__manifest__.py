@@ -27,6 +27,7 @@
         "view/account_move_view.xml",
         "view/report.xml",
         "view/sale_delivery_method.xml",
+        "view/product_template_view.xml",
     ],
     # "installable": True,
 }

@@ -4,6 +4,8 @@ from odoo import api, fields, models
 class PP(models.Model):
 
     _inherit = "product.product"
+
+    
     
     # @api.model
     # def _search(self, args, offset=0, limit=None, order=None, count=False, access_rights_uid=None):
@@ -32,6 +34,7 @@ class PP(models.Model):
 class PT(models.Model):
     _inherit = "product.template"
 
+    warranty_months = fields.Integer(string='Bảo hành')
     # @api.model
     # def _search(self, args, offset=0, limit=None, order=None, count=False, access_rights_uid=None):
     #     if not self.env.su and (self.user_has_groups('base.group_user') and not self.user_has_groups('hugocustom.group_bypass_brand_categ_rule')):
