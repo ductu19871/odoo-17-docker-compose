@@ -98,6 +98,7 @@
     </record>
 
     <!-- 4 -->
+    
 
     <record id="hugo_aj4" model="account.journal">
         <field name="name">LZD</field>

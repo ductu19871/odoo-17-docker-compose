@@ -1,5 +1,18 @@
 from odoo import api, fields, models, _
 from odoo.exceptions import RedirectWarning, UserError, ValidationError, AccessError
+import os
+from  datetime import datetime
+
+def speedtest(func):
+    def wrapper(*arg,**kw):
+        current_time = datetime.now()
+        rs  = func(*arg, **kw)
+        current_time2 = datetime.now()
+        time_difference = current_time2 - current_time
+        seconds_difference = time_difference.total_seconds() 
+        print ('**seconds_difference %s'%func.__name__, seconds_difference)
+        return rs
+    return wrapper
 
 
 class AM(models.Model):
@@ -8,28 +21,82 @@ class AM(models.Model):
     ndt_payment_ids = fields.One2many('account.payment', 'move_id')
     count_ndt_payment = fields.Integer(compute='_compute_count_ndt_payment')
     is_trigger = fields.Boolean()
+    payment_state_old = fields.Char()
 
     @api.depends('is_trigger')
     def _compute_payment_state(self):
         return super()._compute_payment_state()
     
-    def recompute_payment_state(self, limit=0, offset=0, add_domain=[]):
-        dm = [('move_type', 'in', ('out_invoice', 'in_invoice'))]
+    @speedtest
+    def do_st(self, batch_moves, file_path2):
+        for move in batch_moves:
+            try:
+                for l in move.line_ids:
+                    pass
+                    # print ('** l.matched_debit_ids**', [(6,0,l.matched_debit_ids.ids)])
+                    # l.write({'matched_debit_ids': [(6,0, list(l.matched_debit_ids.ids))]})
+                move.write({'state': move.state})
+            except Exception as e:
+                print (e)
+                with open(file_path2, 'a', encoding='utf-8') as file:
+                    # Convert the integer to a string and write it to xthe file
+                    file.write(str(e) + r'\n')
+    @speedtest
+    def recompute_payment_state(self, limit=0, offset=None, add_domain=[], n_split=100, domain=None):
+
+        file_dir = r'C:\Users\TU\Desktop\1'  # Replace with your desired directory
+        file_path = os.path.join(file_dir, 'output.txt')
+        file_path2 = os.path.join(file_dir, 'output_error.txt')
+        # Ensure the directory exists
+        if not os.path.exists(file_dir):
+            os.makedirs(file_dir)
+
+
+        if  offset ==None:
+            try:
+            # Open the file in read mode
+                with open(file_path, 'r') as file:
+                    # Read the content of the file
+                    content = file.read()
+                    # Convert the content to an integer
+                    offset = int(content)
+            except: 
+                offset = offset
+        if not domain:
+            dm = [('move_type', 'in', ('out_invoice', 'in_invoice'))]
+        else:
+            dm = domain
         dm += add_domain
         account_moves = self.env['account.move'].search(dm, limit=limit, offset=offset)
         
-        n_split = 300  # Number of records to process in each batch
+        # n_split = 300  # Number of records to process in each batch
         total_moves = len(account_moves)
         for i in range(0, total_moves, n_split):
             batch_moves = account_moves[i:i + n_split]  # Get a batch of records
             
             # Update the state for each record in the batch
-            for move in batch_moves:
-                move.write({'state': move.state})
+            # for move in batch_moves:
+            self.do_st(batch_moves, file_path2)
+                # try:
+                #     for l in move.line_ids:
+                #         l.write({'matched_debit_ids': l.matched_debit_ids})
+                #     move.write({'state': move.state})
+                # except Exception as e:
+                #     print (e)
+                #     with open(file_path2, 'a', encoding='utf-8') as file:
+                #         # Convert the integer to a string and write it to the file
+                #         file.write(str(e))
+
+
             
             # Commit the changes
+            # self.env.cr.rollback()
             self.env.cr.commit()
             print ('i đã commit', i)
+
+            with open(file_path, 'w') as file:
+                # Convert the integer to a string and write it to the file
+                file.write(str(offset + i + n_split))
     
     def _compute_count_ndt_payment(self):
         for r in self:
