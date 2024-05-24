@@ -97,6 +97,79 @@
         <field name="payment_account_id" ref="hugo_aa3"></field>
     </record>
 
+
+    <!-- ngan hang 4 -->
+
+
+    <record id="hugo_aa4" model="account.account">
+        <field name="name">COD</field>
+        <field name="code">11211</field>
+        <field name="account_type">asset_cash</field>
+    </record>
+
+    <record id="hugo_aj4_code" model="account.journal">
+        <field name="name">COD</field>
+        <field name="code">COD</field>
+        <field name="type">bank</field>
+        <field name="default_account_id" ref="hugo_aa4"></field>
+        <field name="inbound_payment_method_line_ids" eval="False"></field>
+        <field name="outbound_payment_method_line_ids" eval="False"></field>
+    </record>
+
+    <record id="hugo_apml_4_in" model="account.payment.method.line">
+        <field name="name">Manual</field>
+        <field name="sequence">10</field>
+        <field name="journal_id" ref="hugo_aj4_code"></field>
+        <field name="payment_method_id" ref="account.account_payment_method_manual_in"></field>
+        <field name="payment_account_id" ref="hugo_aa4"></field>
+    </record>
+
+    <record id="hugo_apml_4_out" model="account.payment.method.line">
+        <field name="name">Manual</field>
+        <field name="sequence">10</field>
+        <field name="journal_id" ref="hugo_aj4_code"></field>
+        <field name="payment_method_id" ref="account.account_payment_method_manual_out"></field>
+        <field name="payment_account_id" ref="hugo_aa4"></field>
+    </record>
+
+
+    <!-- ngan hang 5 -->
+
+
+    <record id="hugo_aa5" model="account.account">
+        <field name="name">LZDB</field>
+        <field name="code">11212</field>
+        <field name="account_type">asset_cash</field>
+    </record>
+
+    <record id="hugo_aj5" model="account.journal">
+        <field name="name">LZDB</field>
+        <field name="code">LZDB</field>
+        <field name="type">bank</field>
+        <field name="default_account_id" ref="hugo_aa5"></field>
+        <field name="inbound_payment_method_line_ids" eval="False"></field>
+        <field name="outbound_payment_method_line_ids" eval="False"></field>
+    </record>
+
+    <record id="hugo_apml_5_in" model="account.payment.method.line">
+        <field name="name">Manual</field>
+        <field name="sequence">10</field>
+        <field name="journal_id" ref="hugo_aj5"></field>
+        <field name="payment_method_id" ref="account.account_payment_method_manual_in"></field>
+        <field name="payment_account_id" ref="hugo_aa5"></field>
+    </record>
+
+    <record id="hugo_apml_5_out" model="account.payment.method.line">
+        <field name="name">Manual</field>
+        <field name="sequence">10</field>
+        <field name="journal_id" ref="hugo_aj5"></field>
+        <field name="payment_method_id" ref="account.account_payment_method_manual_out"></field>
+        <field name="payment_account_id" ref="hugo_aa5"></field>
+    </record>
+
+
+
+
     <!-- 4 -->
     
 

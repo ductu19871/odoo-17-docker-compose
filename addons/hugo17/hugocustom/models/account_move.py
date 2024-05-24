@@ -42,7 +42,7 @@ class AM(models.Model):
                     # Convert the integer to a string and write it to xthe file
                     file.write(str(e) + r'\n')
     @speedtest
-    def recompute_payment_state(self, limit=0, offset=None, add_domain=[], n_split=100, domain=None):
+    def recompute_payment_state(self, limit=0, offset=0, add_domain=[], n_split=100, domain=None):
 
         file_dir = r'C:\Users\TU\Desktop\1'  # Replace with your desired directory
         file_path = os.path.join(file_dir, 'output.txt')

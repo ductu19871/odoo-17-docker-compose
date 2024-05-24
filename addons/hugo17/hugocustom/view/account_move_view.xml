@@ -24,6 +24,17 @@
                 <field name="ndt_payment_ids" widget="many2many_tags" />
             </xpath>
         </field>
-    </record> -->
+    </record>  -->
+
+    <record id="view_account_invoice_filter_inherit" model="ir.ui.view">
+        <field name="name">view.account.invoice.filter</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_account_invoice_filter"/>
+        <field name="arch" type="xml">
+            <filter name="group_by_sequence_prefix" position="after">
+                <filter string="Payment state" name="group_by_payment_state" context="{'group_by': 'payment_state'}" />
+            </filter>
+        </field>
+    </record>
 
 </odoo>
