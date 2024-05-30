@@ -17,6 +17,7 @@
                     <field name="payment_method_id" />
                     <!-- <field name="note2" /> -->
                     <field name="delivery_interval" />
+                    <field name="ship_include" />
                     <field name="ckt" />
                 </field>
             </field>

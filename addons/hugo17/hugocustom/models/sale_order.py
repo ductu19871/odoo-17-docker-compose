@@ -17,6 +17,8 @@ class SO(models.Model):
     note2 = fields.Text()
     ckt = fields.Integer(default=100, string='Chuyển khoản trước')
     delivery_interval = fields.Char(default='05~07', string='Giao hàng trong vòng')
+    ship_include = fields.Selection([('0_ship_not_include', 'Chưa bao gồm chi phí vận chuyển'),
+                                     ('1_ship_include', 'Đã bao gồm chi phí vận chuyển')], default='0_ship_not_include')
     def _prepare_invoice(self):
         return super(SO, self.with_context(overwrite_user_warehouse_id = self.warehouse_id ))._prepare_invoice()
     
