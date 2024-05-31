@@ -1,6 +1,6 @@
 <odoo>
-    <record id="fake_respartner" model="res.partner">
+    <!-- <record id="fake_respartner" model="res.partner">
         <field name="name">Fake respartner for missing</field>
         <field name="email">fake@gmail.com</field>
-    </record>
+    </record> -->
 </odoo>

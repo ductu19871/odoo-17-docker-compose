@@ -23,7 +23,7 @@
         <field name="aeroo_out_format_id" ref="report_aeroo_tltek.aeroo_mimetype_pdf_odt"/>
         <field name="aeroo_template_path">hugocustom/report/sale_report_py3o.odt</field>
         <field name="aeroo_template_source">file</field>
-   		<field name="print_report_name">'sale_or_quotation'</field>
+   		<field name="print_report_name">'sale_or_quotation_%s'%object.name</field>
    		<field name="binding_model_id" ref="sale.model_sale_order"/>
     </record>
 

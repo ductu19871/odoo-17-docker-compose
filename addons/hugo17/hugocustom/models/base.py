@@ -6,6 +6,9 @@ from bs4 import BeautifulSoup
 
 class Base(models.AbstractModel):
     _inherit = 'base'
+
+    def ndt_cm(self):
+        {'fields': fields}
     
     def format_number(self, amount, decimal_places=0, lang_code=False, env=None):
 
