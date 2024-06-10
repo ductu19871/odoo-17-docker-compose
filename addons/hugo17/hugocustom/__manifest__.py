@@ -17,6 +17,7 @@
         "data/uom_uom.xml",
         "data/test.xml",
         "data/cron.xml",
+        "data/data.xml",
         # "data/account_data.xml",
         "data/sale_delivery_method_data.xml",
         "data/account_payment_method.xml",
@@ -28,6 +29,7 @@
         "view/report.xml",
         "view/sale_delivery_method.xml",
         "view/product_template_view.xml",
+        "view/account_kaban.xml",
     ],
     # "installable": True,
 }

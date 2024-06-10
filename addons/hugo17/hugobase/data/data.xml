@@ -3,5 +3,6 @@
     <data noupdate="0">
         <!-- <function model="res.lang" name="active_a_lang"/> -->
         <function model="res.lang" name="active_a_lang" eval="('vi_VN',)"/>
+        <!-- <function model="account.journal" name="set_payment_account_id" eval="()"/> -->
     </data>
 </odoo>

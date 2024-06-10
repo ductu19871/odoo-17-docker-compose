@@ -168,6 +168,42 @@
     </record>
 
 
+    <!-- ngan hang 6 ( tiền mặt BPC) -->
+
+
+    <record id="hugo_aa6" model="account.account">
+        <field name="name">BPCash</field>
+        <field name="code">11213</field>
+        <field name="account_type">asset_cash</field>
+    </record>
+
+    <record id="hugo_aj6" model="account.journal">
+        <field name="name">BPCASH</field>
+        <field name="code">BPCASH</field>
+        <field name="type">cash</field>
+        <field name="default_account_id" ref="hugo_aa6"></field>
+        <field name="inbound_payment_method_line_ids" eval="False"></field>
+        <field name="outbound_payment_method_line_ids" eval="False"></field>
+    </record>
+
+    <record id="hugo_apml_6_in" model="account.payment.method.line">
+        <field name="name">Manual</field>
+        <field name="sequence">10</field>
+        <field name="journal_id" ref="hugo_aj6"></field>
+        <field name="payment_method_id" ref="account.account_payment_method_manual_in"></field>
+        <field name="payment_account_id" ref="hugo_aa6"></field>
+    </record>
+
+    <record id="hugo_apml_6_out" model="account.payment.method.line">
+        <field name="name">Manual</field>
+        <field name="sequence">10</field>
+        <field name="journal_id" ref="hugo_aj6"></field>
+        <field name="payment_method_id" ref="account.account_payment_method_manual_out"></field>
+        <field name="payment_account_id" ref="hugo_aa6"></field>
+    </record>
+
+
+
 
 
     <!-- 4 -->
