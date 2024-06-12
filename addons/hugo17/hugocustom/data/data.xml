@@ -2,5 +2,11 @@
 <odoo>
     <data noupdate="0">
         <function model="account.journal" name="set_payment_account_id"/>
+
+        <record id="base.main_company" model="res.company">
+            <field name="name">Công ty TNHH TM DV ĐTCN Phương Nam</field>
+            <field name="logo" type="base64" file="hugocustom/static/src/img/hugologo.png"/>
+        </record>
     </data>
+     
 </odoo>

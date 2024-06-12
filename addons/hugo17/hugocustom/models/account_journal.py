@@ -1,5 +1,6 @@
 from odoo import api, fields, models
 from odoo.tools.misc import formatLang
+import traceback
 
 
 class AJ(models.Model):
@@ -49,9 +50,11 @@ class AJ(models.Model):
         #     res['account_balance_ndt'] = formatLang(self.env, currency.round(account_sum) + 0.0, currency_obj=currency)
         return res
 
+    def change_name_bank(self):
+        self.env.ref('account.1_bank').with_context(lang='vi_VN').name = 'Ngân hàng Quân Đội MBBANK'
+
     @api.model
-    def set_payment_account_id(self):
-        return
+    def _set_payment_account_id(self):
         adict = {'1124': 'account.1_bank', '1111': 'account.1_cash'}
         for aa_code, journal_xid in adict.items():
             jn = self.env.ref(journal_xid)
@@ -59,4 +62,11 @@ class AJ(models.Model):
             lines = self.env['account.payment.method.line'].search([('journal_id', '=', jn.id)])
             lines.payment_account_id = bank_account
 
-        
+    @api.model
+    def set_payment_account_id(self):
+        try:
+            self._set_payment_account_id()
+            self.change_name_bank()
+        except Exception as e:
+            print (traceback.format_exc())
+            pass
