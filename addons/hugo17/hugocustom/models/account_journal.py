@@ -52,6 +52,7 @@ class AJ(models.Model):
 
     def change_name_bank(self):
         self.env.ref('account.1_bank').with_context(lang='vi_VN').name = 'Ngân hàng Quân Đội MBBANK'
+        self.env.ref('account.1_general').with_context(lang='vi_VN').show_on_dashboard = False
 
     @api.model
     def _set_payment_account_id(self):

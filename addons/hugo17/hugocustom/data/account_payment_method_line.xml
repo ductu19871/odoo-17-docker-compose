@@ -9,6 +9,7 @@
         <field name="name">Tiên Phong Bank</field>
         <field name="code">TPB</field>
         <field name="type">bank</field>
+        <field name="show_on_dashboard" eval="False"></field>
         <field name="default_account_id" ref="hugo_aa1"></field>
         <field name="inbound_payment_method_line_ids" eval="False"></field>
         <field name="outbound_payment_method_line_ids" eval="False"></field>
@@ -73,7 +74,7 @@
     </record>
 
     <record id="hugo_aj3" model="account.journal">
-        <field name="name">VPBANK</field>
+        <field name="name">Ngân hàng Việt Nam Thịnh Vượng VPBANK</field>
         <field name="code">VPB</field>
         <field name="type">bank</field>
         <field name="default_account_id" ref="hugo_aa3"></field>
