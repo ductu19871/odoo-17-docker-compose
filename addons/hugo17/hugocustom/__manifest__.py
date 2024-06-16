@@ -29,7 +29,7 @@
         "view/report.xml",
         "view/sale_delivery_method.xml",
         "view/product_template_view.xml",
-        "view/account_kaban.xml",
+        # "view/account_kaban.xml",
     ],
     # "installable": True,
 }

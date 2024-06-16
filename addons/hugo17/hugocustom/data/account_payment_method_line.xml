@@ -111,6 +111,7 @@
     <record id="hugo_aj4_code" model="account.journal">
         <field name="name">COD</field>
         <field name="code">COD</field>
+        <field name="show_on_dashboard" eval="False"></field>
         <field name="type">bank</field>
         <field name="default_account_id" ref="hugo_aa4"></field>
         <field name="inbound_payment_method_line_ids" eval="False"></field>
@@ -144,7 +145,7 @@
     </record>
 
     <record id="hugo_aj5" model="account.journal">
-        <field name="name">LZDB</field>
+        <field name="name">Thanh toán Lazada</field>
         <field name="code">LZDB</field>
         <field name="type">bank</field>
         <field name="default_account_id" ref="hugo_aa5"></field>

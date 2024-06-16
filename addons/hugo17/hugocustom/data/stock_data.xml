@@ -1,10 +1,11 @@
 <odoo> 
     <record id="stock.warehouse0" model="stock.warehouse">
-        <field name="name">Kho HCM</field>
+        <field name="name">Kho TP.HCM</field>
+        <field name="code">HCM</field>
     </record>
     <record id="warehouse_bpc" model="stock.warehouse">
         <field name="name">Kho Bình Phước</field>
-        <field name="code">BPC</field>
+        <field name="code">K-BP</field>
     </record>
 
 </odoo>
